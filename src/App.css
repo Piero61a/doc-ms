@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-light: #ecf6ff;
+    --primary-normal: #3da9fc;
+
+    --secundary-normal: #ef4565;
+
+    --tertiary: #094067;
+
+    --white: #fff;
+
+    /* ### Darck Colors ### */
+    --dark-light: #eff0f2;
+    --dark-normal: #5f6c7b;
+
+    /* ### Feedback Colors ### */
+    --fb-green: #4bdb24;
+
+    /* Backgrounds */
+    --dashboard-bg: #fcfcfc;
+
+    /* Border */
+    --dashboard-border: #e7e9eb;
+
+    /* Normal Fonts */
+    --normal-font: #5f6c7b;
+    --dark-font: #39414a;
+    --title-font: #041d2e;
+  }
+}
+
+/* ======= Inter Fonts ======= */
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), local('Inter-regular'),
+    url('/src/assets/fonts/inter/Inter-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), local('Inter-Medium'),
+    url('/src/assets/fonts/inter/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter'), local('Inter-Bold'),
+    url('/src/assets/fonts/inter/Inter-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+/* ======= dancingScript Fonts ======= */
+@font-face {
+  font-family: 'dancingScript';
+  src: local('dancingScript'), local('dancingScript-Bold'),
+    url('/src/assets/fonts/dancingScript/DancingScript-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}

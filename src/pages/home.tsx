@@ -1,7 +1,9 @@
+import SideBar from '../components/layout/sideBar/sideBar';
 function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <SideBar/>
+      <div></div>
     </div>
   );
 }

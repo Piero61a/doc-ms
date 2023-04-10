@@ -1,0 +1,26 @@
+.sidebar {
+  @apply border-black border-solid border-1 w-[30%] h-auto;
+}
+.nav-title {
+  @apply font-sans text-4xl;
+}
+/* .sidebar {
+  border: 1px solid black;
+  width: 30%;
+  height: auto;
+}
+.app-logo-container {
+  width: auto;
+  height: auto;
+  display: grid;
+  place-content: center;
+  margin-top: 2em;
+}
+.app-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.sidebar-nav {
+  border: 1px solid black;
+} */
