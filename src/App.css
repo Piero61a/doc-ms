@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body{
+  @apply bg-[#121212]
+}
 @layer base {
   :root {
     --primary-light: #ecf6ff;

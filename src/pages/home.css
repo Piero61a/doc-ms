@@ -1,0 +1,12 @@
+.container-general {
+  @apply mx-auto w-[1100px] h-full;
+}
+.home-container {
+  @apply flex ;
+}
+.home {
+  @apply w-full ;
+}
+.dashboard {
+  @apply w-full;
+}

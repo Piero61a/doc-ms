@@ -2,21 +2,27 @@ import { NavLink, useLocation } from "react-router-dom";
 import { ICON_SIDEBAR_PATH } from "../../../constants/path";
 import "./sideBar.css";
 
-function SideBar() {
+interface SideBarProps {
+  onComponentSelect: (component: string) => void;
+}
+
+function SideBar({ onComponentSelect }: SideBarProps) {
   const location = useLocation();
   console.log(location);
 
   const sidebarMenuOptions = [
-    { name: "javaScript", icon: "javascript-icon", path: "/javascript" },
-    { name: "typeScript", icon: "typescript-icon", path: "/typescript" },
-    { name: "react", icon: "react-icon", path: "/react" },
+    { name: "Home", icon: "home-icon", path: "/" },
+    { name: "JavaScript", icon: "javascript-icon", path: "/javascript" },
+    { name: "TypeScript", icon: "typescript-icon", path: "/typescript" },
+    { name: "React", icon: "react-icon", path: "/react" },
   ];
+
+  function handleComponentSelect(name: string) {
+    onComponentSelect(name);
+  }
 
   return (
     <aside className="sidebar">
-      <picture className="app-logo-container">
-        <img className="app-logo" src="public/images/logo.svg" />
-      </picture>
 
       <nav className="sidebar-nav">
         <section>
@@ -29,6 +35,7 @@ function SideBar() {
                     `sidebar-option ${isActive && `sidebar-option__active`}`
                   }
                   to={path}
+                  onClick={() => handleComponentSelect(name)}
                 >
                   {location.pathname === path ? (
                     <img src={`${ICON_SIDEBAR_PATH}/${icon}-active.svg`} />
@@ -45,4 +52,5 @@ function SideBar() {
     </aside>
   );
 }
+
 export default SideBar;

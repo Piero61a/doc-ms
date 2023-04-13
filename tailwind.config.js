@@ -5,7 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["dancingScript", "Inter", "sans-serif"],
-        serif: ["dancingScript", "Inter", "sans-serif"],
+        serif: ["Inter", "sans-serif"],
       },
       colors: {
         /* ### Colors ### */

@@ -1,0 +1,6 @@
+.footer-container {
+  @apply border-solid border-white  border-t-1  bg-[#121212]  w-full;
+}
+.footer-text {
+  @apply text-[#7c7b7b] text-xs mt-[8px] mr-[15px] text-right;
+}

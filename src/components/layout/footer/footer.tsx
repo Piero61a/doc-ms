@@ -1,7 +1,8 @@
+import "./footer.css"
 function Footer() {
   return (
-    <footer className="navbar navbar-dark bg-dark">
-      <h1>soy el footer</h1>
+    <footer className="footer-container">
+      <p className="footer-text">Piero Garcia Montero</p>
     </footer>
   );
 }

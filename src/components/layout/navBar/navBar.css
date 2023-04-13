@@ -1,5 +1,25 @@
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 5em;
+.nav-container {
+  @apply border-solid border-white  border-b-1 h-20 bg-[#121212] flex justify-between px-[5%];
 }
+.nav-navlink {
+  @apply flex items-center;
+}
+.title-logo {
+  @apply text-white font-sans text-2xl ml-[-1.0125em];
+}
+.container-networks {
+  @apply flex items-center gap-5;
+}
+.text{
+  @apply text-white font-serif
+}
+/* .nav-container {
+  @apply bg-gray-400 w-full h-[100px] flex justify-center gap-5 border-b-1 border-opacity-75 border-gray-400;
+}
+
+.navbar-option {
+  @apply font-serif h-10 my-auto rounded-lg bg-[#660000] w-40 grid place-content-center text-white hover:border-black hover:border-[2px] hover:border-solid ;
+}
+.navbar-option__active {
+  @apply bg-white text-black scale-110;
+} */
