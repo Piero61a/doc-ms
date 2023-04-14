@@ -1,11 +1,17 @@
 .title-general {
-  @apply text-center text-[white] font-bold text-[2em] mt-[1em] font-serif;
+  @apply text-center text-red-600 font-bold text-[2em] mt-[1em] font-serif;
 }
 .p-js {
-  @apply text-center text-[#7c7b7b] py-[1em] px-[10%];
+  @apply text-center text-[#7c7b7b] ;
 }
 .items {
-  @apply mt-[1.5em];
+  @apply mt-[1.5em] ;
+}
+.title-subject{
+  @apply  text-red-600 text-[2em]  ml-[1em] font-bold
+}
+.text-position{
+  @apply text-white text-sm ml-[5.8em] mt-2 mr-[4em]
 }
 
 /* ==============TOOLS=========== */
@@ -13,25 +19,14 @@
   @apply text-[#DDD] mt-[0.5em] ml-[3em];
 }
 .tools {
-  @apply text-[red];
+  @apply text-red-500;
 }
 /* ==============VARIABLES=========== */
 
-.title {
-  @apply text-white text-[1.125em]  font-bold mx-[2em];
+.title-in-subject {
+  @apply text-red-600 ml-[2em] mt-[0.5em] text-[1.5em] font-bold mr-[3em];
 }
-.title-1 {
-  @apply text-[#DDD] ml-[3em] mt-[0.5em] text-[1.125em] font-bold mr-[3em];
-}
-.title-2 {
-  @apply text-[#DDD] ml-[4em] text-[1.125em] font-bold;
-}
-.paragraph {
-  @apply text-[#DDD] ml-[6em] mr-[4.5em] mt-1 text-[0.800em];
-}
-.codebox {
-  @apply mt-[0.5em];
-}
+
 .basic {
   @apply mt-[1.5em];
 }

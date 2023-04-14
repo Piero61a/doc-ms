@@ -2,5 +2,5 @@
   @apply text-center py-[2em] px-[10%] text-[#7c7b7b];
 }
 .content-index {
-  @apply text-white font-bold text-[1em];
+  @apply text-white font-bold text-[2em];
 }

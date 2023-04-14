@@ -1,0 +1,12 @@
+.container-var {
+  @apply mt-[1.5em];
+}
+.title-var {
+  @apply text-[#DDD] ml-[3.6em] text-[1em] font-bold;
+}
+.paragraph-var {
+  @apply text-[#DDD] ml-[8em] mr-[4.5em] mt-1 text-[0.800em] ;
+}
+.codebox-var {
+  @apply mt-[0.5em];
+}
