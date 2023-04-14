@@ -1,0 +1,3 @@
+.code-box {
+  @apply bg-[#DDD] rounded-xl p-[10px] my-[10px] w-[88%] mx-auto;
+}
