@@ -1,0 +1,15 @@
+.container-operators {
+  @apply mt-[1.5em];
+}
+.title-operators {
+  @apply text-[#DDD] ml-[3.6em] text-[1em] font-bold;
+}
+.paragraph-operators {
+  @apply text-[#DDD] ml-[8em] mr-[4.5em] mt-1 text-[0.800em];
+}
+.cont-list{
+    @apply mt-4
+}
+.list-operators {
+  @apply text-[#DDD]  ml-[10em] text-[0.800em] my-2;
+}

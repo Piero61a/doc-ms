@@ -1,13 +1,13 @@
-.container-conditional {
+.container-functions {
     @apply mt-[1.5em];
   }
-  .title-conditional {
+  .title-functions {
     @apply text-[#DDD] ml-[3.6em] text-[1em] font-bold;
   }
-  .paragraph-conditional {
+  .paragraph-functions {
     @apply text-[#DDD] ml-[8em] mr-[4.5em] mt-1 text-[0.800em] ;
   }
-  .codebox-conditional {
+  .codebox-functions {
     @apply mt-[0.5em];
   }
   

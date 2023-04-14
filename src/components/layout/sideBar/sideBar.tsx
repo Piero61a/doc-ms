@@ -8,7 +8,6 @@ interface SideBarProps {
 
 function SideBar({ onComponentSelect }: SideBarProps) {
   const location = useLocation();
-  console.log(location);
 
   const sidebarMenuOptions = [
     { name: "Home", icon: "home-icon", path: "/" },

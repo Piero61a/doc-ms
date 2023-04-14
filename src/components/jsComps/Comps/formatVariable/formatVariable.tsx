@@ -1,31 +1,30 @@
-import CodeWindow from "../../../sharedComponents/windowCode/codeWindow";
+import CodeWindow from "../../../../sharedComponents/windowCode/codeWindow";
 
-import "./FormatComp.css";
+import "./FormatVariable.css";
 
-interface iFormatComp {
+interface iFormatVariable {
   id: number;
   title: string;
   paragraph: string;
   code: string;
 }
 type tData = {
-  data: iFormatComp[];
+  data: iFormatVariable[];
 };
 
-const FormatComp = ({ data }: tData) => {
+const FormatVariable = ({ data }: tData) => {
   return (
     <ul>
       {data.map((item) => (
-        <li className="container-var">
+        <li key={item.id+1} className="container-var">
           <h3 className="title-var">{item.title}</h3>
           <p className="paragraph-var">{item.paragraph}</p>
           <div className="codebox-var">
-            <CodeWindow code={item.code}/>
+            <CodeWindow code={item.code} />
           </div>
         </li>
       ))}
     </ul>
   );
 };
-
-export default FormatComp;
+export default FormatVariable;

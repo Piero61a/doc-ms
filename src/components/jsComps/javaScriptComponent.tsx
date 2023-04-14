@@ -1,11 +1,17 @@
 import "./javaScriptComponent.css";
 import CodeWindow from "../../sharedComponents/windowCode/codeWindow";
-import FormatComp from "./Comps/FormatComp";
 
 import typesOfVariables from "../../constants/typesOfVariables";
-import logicalOperator from "../../constants/logicalOperators";
-import FormatConditionals from "./Comps/FormatConditionals";
+import operators from "../../constants/operators";
+
 import conditionals from "../../constants/conditionals";
+import FormatVariable from "./Comps/formatVariable/formatVariable";
+import FormatBucles from "./Comps/formatBucles/formatBucles";
+import bucles from "../../constants/bucles";
+import FormatOperators from "./Comps/formatOperators/formatOperators";
+import FormatConditionals from "./Comps/formatConditional/formatConditionals";
+import FormatFunctions from "./Comps/formatFunctions/formatFunctions";
+import functionsData from "../../constants/functions";
 
 const variableCode = `    // Declaración de una variable llamada "edad"
     var edad = 8;
@@ -19,21 +25,11 @@ const variableCode = `    // Declaración de una variable llamada "edad"
     // Imprime la nueva edad en la consola
     console.log("Mi nueva edad es: " + edad);
 `;
-const codeConditionalIf = `    let x = 10;
-    if (x > 5) {
-      console.log("x es mayor que 5");
-    }`;
-const codeConditionalElse = `    let x = 2;
-    if (x > 5) {
-      console.log("x es mayor que 5");
-    } else {
-      console.log("x es menor o igual a 5");
-    }`;
 
 export default function JavaScriptComponent() {
   return (
     <div className="container">
-      <div>
+      <div className="items">
         <h1 className="title-general">¿Que es JavaScript?</h1>
         <p className="p-js">
           JavaScript es un lenguaje de programación orientado a objetos,
@@ -75,7 +71,7 @@ export default function JavaScriptComponent() {
               Existen 5 tipos de variables, y son las siguientes:
             </p>
             <div>
-              <FormatComp data={typesOfVariables} />
+              <FormatVariable data={typesOfVariables} />
               <p className="text-position">
                 Estos son solo algunos de los tipos de variables que se pueden
                 utilizar en JavaScript. Cada uno tiene sus propias
@@ -92,11 +88,11 @@ export default function JavaScriptComponent() {
               cada uno de ellos:
             </p>
             <div>
-              <FormatComp data={logicalOperator}></FormatComp>
+              <FormatOperators data={operators} />
             </div>
           </div>
           <div className="basic">
-            <h3 className="title-in-subject">1.4 Condicionales</h3>
+            <h3 className="title-in-subject">1.4. Condicionales</h3>
             <FormatConditionals data={conditionals} />
             <p className="text-position">
               En este ejemplo, la primera expresión `5 &gt; x` es falsa, por lo
@@ -112,7 +108,32 @@ export default function JavaScriptComponent() {
               declaración `if`.
             </p>
           </div>
-          
+          <div className="basic">
+            <h3 className="title-in-subject">1.5. Bucles</h3>
+            <p className="text-position">
+              En JavaScript, los bucles son estructuras de control que permiten
+              repetir un bloque de código varias veces mientras se cumpla una
+              condición específica. Los tres tipos principales de bucles en
+              JavaScript son: `while`, `do-while` y `for`.
+            </p>
+            <FormatBucles data={bucles} />
+          </div>
+          <div className="basic">
+            <h3 className="title-in-subject">1.6. Funciones</h3>
+            <p className="text-position">
+              Una función es un bloque de código que se puede llamar y ejecutar
+              varias veces con diferentes valores de entrada. Las funciones se
+              utilizan para agrupar código que realiza una tarea específica, lo
+              que las hace muy útiles para reulización de código y para la
+              modularidad
+            </p>
+            <p className="text-position">
+              Hay varios tipos de funciones, cada uno con sus propias
+              características. A continuación, se describen los diferentes tipos
+              de funciones en JavaScript
+            </p>
+            <FormatFunctions data={functionsData}/>
+          </div>
         </div>
       </div>
     </div>

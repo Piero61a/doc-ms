@@ -1,0 +1,13 @@
+.container-bucle {
+  @apply mt-[1.5em];
+}
+.title-bucle {
+  @apply text-[#DDD] ml-[3.6em] text-[1em] font-bold;
+}
+.paragraph-bucle {
+  @apply text-[#DDD] ml-[8em] mr-[4.5em] mt-1 text-[0.800em];
+}
+.codebox-bucle {
+    @apply mt-[0.5em];
+  }
+  

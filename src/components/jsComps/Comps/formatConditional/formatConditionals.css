@@ -1,0 +1,12 @@
+.container-conditional {
+  @apply mt-[1.5em];
+}
+.title-conditional {
+  @apply text-[#DDD] ml-[3.6em] text-[1em] font-bold;
+}
+.paragraph-conditional {
+  @apply text-[#DDD] ml-[8em] mr-[4.5em] mt-1 text-[0.800em];
+}
+.codebox-conditional {
+  @apply mt-[0.5em];
+}

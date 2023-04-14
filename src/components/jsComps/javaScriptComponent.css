@@ -19,7 +19,7 @@
   @apply text-[#DDD] mt-[0.5em] ml-[3em];
 }
 .tools {
-  @apply text-red-500;
+  @apply text-red-600;
 }
 /* ==============VARIABLES=========== */
 
