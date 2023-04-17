@@ -1,4 +1,4 @@
-import CodeWindow from "../../../../sharedComponents/windowCode/codeWindow";
+import CodeWindow from "../../../../../sharedComponents/windowCode/codeWindow";
 
 import "./FormatVariable.css";
 

@@ -22,7 +22,6 @@ function SideBar({ onComponentSelect }: SideBarProps) {
 
   return (
     <aside className="sidebar">
-
       <nav className="sidebar-nav">
         <section>
           <h3 className="nav-title">Courses</h3>

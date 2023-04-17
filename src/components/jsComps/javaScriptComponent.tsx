@@ -1,35 +1,28 @@
 import "./javaScriptComponent.css";
-import CodeWindow from "../../sharedComponents/windowCode/codeWindow";
 
-import typesOfVariables from "../../constants/typesOfVariables";
-import operators from "../../constants/operators";
-
-import conditionals from "../../constants/conditionals";
-import FormatVariable from "./Comps/formatVariable/formatVariable";
-import FormatBucles from "./Comps/formatBucles/formatBucles";
-import bucles from "../../constants/bucles";
-import FormatOperators from "./Comps/formatOperators/formatOperators";
-import FormatConditionals from "./Comps/formatConditional/formatConditionals";
-import FormatFunctions from "./Comps/formatFunctions/formatFunctions";
-import functionsData from "../../constants/functions";
-
-const variableCode = `    // Declaración de una variable llamada "edad"
-    var edad = 8;
-
-    // Imprime la edad en la consola
-    console.log("Mi edad es: " + edad);
-
-    // Actualiza la variable con una nueva edad
-    edad = 9;
-
-    // Imprime la nueva edad en la consola
-    console.log("Mi nueva edad es: " + edad);
-`;
+import NecessaryTools from "./Comps/necessaryTools/necessaryTools";
+import BasicFeatures from "./Comps/basicFeatures/basicFeatures";
+import { useState } from "react";
+import Objects from "./Comps/objects/objects";
+type tTitleData = {
+  title: string;
+  component: JSX.Element;
+};
+const titleData: tTitleData[] = [
+  { title: "0. Herramientas necesarias", component: <NecessaryTools /> },
+  { title: "1. características básicas", component: <BasicFeatures /> },
+  { title: "2. Objetos", component: <Objects /> },
+];
 
 export default function JavaScriptComponent() {
+  const [visibleTitle, setVisibleTitle] = useState("");
+
+  const handleToggle = (title: string) =>
+    setVisibleTitle(visibleTitle === title ? "" : title);
+
   return (
-    <div className="container">
-      <div className="items">
+    <div className="container-js">
+      <div className="items-js">
         <h1 className="title-general">¿Que es JavaScript?</h1>
         <p className="p-js">
           JavaScript es un lenguaje de programación orientado a objetos,
@@ -39,103 +32,26 @@ export default function JavaScriptComponent() {
           en una herramienta esencial para cualquier proyecto web.
         </p>
       </div>
-      <div className="items">
-        <h2 className="title-subject">0. Herramientas necesarias</h2>
-        <ol className="list-tools">
-          <li>
-            1. Editor de código -
-            <a className="tools" href="https://code.visualstudio.com/">
-              Descargar Visual studio code
-            </a>
-          </li>
-          <li>
-            2. Node -
-            <a className="tools" href="https://nodejs.org/en">
-              Descargar Node
-            </a>
-          </li>
-        </ol>
-      </div>
-      <div className="items">
-        <div>
-          <h2 className="title-subject">1. Carácteristicas básicas</h2>
-          <div className="basic">
-            <h3 className="title-in-subject">1.1. Variables</h3>
-            <div className="codebox">
-              <CodeWindow code={variableCode}></CodeWindow>
-            </div>
-          </div>
-          <div className="basic">
-            <h3 className="title-in-subject">1.2. Tipos de variables</h3>
-            <p className="text-position">
-              Existen 5 tipos de variables, y son las siguientes:
-            </p>
-            <div>
-              <FormatVariable data={typesOfVariables} />
-              <p className="text-position">
-                Estos son solo algunos de los tipos de variables que se pueden
-                utilizar en JavaScript. Cada uno tiene sus propias
-                características y se utilizan en diferentes situaciones
-                dependiendo de lo que se quiera lograr.
-              </p>
-            </div>
-          </div>
-          <div className="basic">
-            <h3 className="title-in-subject">1.3. Operadores</h3>
-            <p className="text-position">
-              En JavaScript, existen tres operadores lógicos principales: AND
-              (&&), OR (||) y NOT (!). A continuación, te explico brevemente
-              cada uno de ellos:
-            </p>
-            <div>
-              <FormatOperators data={operators} />
-            </div>
-          </div>
-          <div className="basic">
-            <h3 className="title-in-subject">1.4. Condicionales</h3>
-            <FormatConditionals data={conditionals} />
-            <p className="text-position">
-              En este ejemplo, la primera expresión `5 &gt; x` es falsa, por lo
-              que se verifica la siguiente expresión `x === 5`. Como esta
-              expresión también es falsa, se ejecuta el bloque de código dentro
-              de la última declaración `else`, y se muestra el mensaje "x es
-              mayor que 5" en la consola.
-            </p>
-            <p className="text-position">
-              Recuerda que siempre debes tener una declaración `if` cuando estás
-              utilizando una declaración `else` o `else if`, ya que estas
-              últimas dependen de la evaluación de una expresión dentro de una
-              declaración `if`.
-            </p>
-          </div>
-          <div className="basic">
-            <h3 className="title-in-subject">1.5. Bucles</h3>
-            <p className="text-position">
-              En JavaScript, los bucles son estructuras de control que permiten
-              repetir un bloque de código varias veces mientras se cumpla una
-              condición específica. Los tres tipos principales de bucles en
-              JavaScript son: `while`, `do-while` y `for`.
-            </p>
-            <FormatBucles data={bucles} />
-          </div>
-          <div className="basic">
-            <h3 className="title-in-subject">1.6. Funciones</h3>
-            <p className="text-position">
-              Una función es un bloque de código que se puede llamar y ejecutar
-              varias veces con diferentes valores de entrada. Las funciones se
-              utilizan para agrupar código que realiza una tarea específica, lo
-              que las hace muy útiles para reulización de código y para la
-              modularidad
-            </p>
-            <p className="text-position">
-              Hay varios tipos de funciones, cada uno con sus propias
-              características. A continuación, se describen los diferentes tipos
-              de funciones en JavaScript
-            </p>
-            <FormatFunctions data={functionsData}/>
-          </div>
+      {titleData.map(({ title, component }) => (
+        <div key={title} className="items-js">
+          <h2 onClick={() => handleToggle(title)} className="title-subject">
+            {title}
+          </h2>
+          {visibleTitle === title && component}
         </div>
+      ))}
+      {/* <div className="items-js">
+        <h2 className="title-subject">0. Herramientas necesarias</h2>
+        <NecessaryTools />
       </div>
+      <div className="items-js">
+        <h2 className="title-subject">1. características básicas</h2>
+        <BasicFeatures />
+      </div>
+
+      <div className="items-js">
+        <h2 className="title-subject">2. Objetos</h2>
+      </div> */}
     </div>
   );
 }

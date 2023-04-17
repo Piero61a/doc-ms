@@ -1,5 +1,5 @@
-import "./formatFunctions.css"
-import CodeWindow from "../../../../sharedComponents/windowCode/codeWindow";
+import CodeWindow from "../../../../../sharedComponents/windowCode/codeWindow";
+import "./formatFunctions.css";
 interface iformatFunctions {
   id: number;
   title: string;

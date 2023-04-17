@@ -1,6 +1,6 @@
 import React from "react";
 import "./FormatConditionals.css";
-import CodeWindow from "../../../../sharedComponents/windowCode/codeWindow";
+import CodeWindow from "../../../../../sharedComponents/windowCode/codeWindow";
 interface iFormatConditionals {
   id: number;
   title: string;

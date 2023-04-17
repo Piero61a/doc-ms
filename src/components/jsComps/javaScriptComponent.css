@@ -4,11 +4,11 @@
 .p-js {
   @apply text-center text-[#7c7b7b] ;
 }
-.items {
+.items-js {
   @apply mt-[1.5em] ;
 }
 .title-subject{
-  @apply  text-red-600 text-[2em]  ml-[1em] font-bold
+  @apply  text-red-600 text-[2em]  ml-[1em] font-bold hover:cursor-pointer
 }
 .text-position{
   @apply text-white text-sm ml-[5.8em] mt-2 mr-[4em]
@@ -24,7 +24,7 @@
 /* ==============VARIABLES=========== */
 
 .title-in-subject {
-  @apply text-red-600 ml-[2em] mt-[0.5em] text-[1.5em] font-bold mr-[3em];
+  @apply text-red-600 ml-[2em] mt-[0.5em] text-[1.5em] hover:cursor-pointer font-bold mr-[3em];
 }
 
 .basic {

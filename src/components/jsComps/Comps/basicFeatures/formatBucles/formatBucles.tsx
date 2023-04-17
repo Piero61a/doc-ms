@@ -1,5 +1,5 @@
 import "./formatBucles.css"
-import CodeWindow from "../../../../sharedComponents/windowCode/codeWindow";
+import CodeWindow from "../../../../../sharedComponents/windowCode/codeWindow";
 interface iFormatBucles {
   id: number;
   title: string;
